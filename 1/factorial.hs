@@ -5,7 +5,6 @@ factorial :: Int -> Integer
 factorial n = if (k == 1)
                 then 1
                 else k * (factorial (k - 1))
-  
 main = do
     hSetBuffering stdout NoBuffering
     putStr "Factorial\nn = "
