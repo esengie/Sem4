@@ -1,0 +1,1 @@
+findPos list elt = map fst $ filter ((elt==).snd) $ zip [0..] list
