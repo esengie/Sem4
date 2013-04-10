@@ -3,7 +3,7 @@ spaces = ' ':spaces
 stars = '*':stars
 
 does n = does' n (n - 1)
-does' n k
+  where does' n k
 	  | k > 0 = ir:ini ++ [im]		       
 	  | k == 0 = [take (n + n - 1) stars]
 	  | otherwise = []
