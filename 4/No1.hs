@@ -1,4 +1,4 @@
-data Tree = Nil
+data Tree a = Nil
 	  | Branch a (Tree a) (Tree a)
 searchTree :: (a-> Bool) -> (Tree a) -> Bool
 
