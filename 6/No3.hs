@@ -17,7 +17,7 @@ instance F.Foldable Tree where                                                --
     foldr f z EmptyTree = z  
     foldr f z (Node x leftsub rightsub) = f x (F.foldr f (F.foldr f z rightsub) leftsub)
 
-removeElem :: (Ord a) => Tree a -> a -> Tree a                                -- тоже хак июо лень                                   
+removeElem :: (Ord a) => Tree a -> a -> Tree a                                -- тоже хак ибо лень                                   
 removeElem t x = if (F.elem x t) then fromListT . filter (/=x) $ F.toList t
                              else t
           

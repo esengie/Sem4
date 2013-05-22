@@ -11,4 +11,4 @@ cFilter :: (a -> Bool) -> [a] ->  Cont [a] [a]
 cFilter _ [] = return []
 cFilter f (x:xs) = cFilter f xs >>= return . (filter f [x]!!0 :)
 
-filter' f xs = runCont (cFilter f xss) id
+filter' f xs = runCont (cFilter f xs) id
